@@ -37,7 +37,7 @@ async fn main() -> anyhow::Result<()> {
 
     let llm = LlamaBuilder::default()
         .with_source(LlamaSource::zephyr_7b_alpha())
-        .build()?;
+        .build().await?;
     println!("done!");
 
     let mut msgq = fs::read_to_string("msgq.ron")
