@@ -76,6 +76,7 @@ async fn main() -> anyhow::Result<()> {
                 "conversation.ron",
                 ser::to_string_pretty(&old_messages, Default::default()).unwrap(),
             )?;
+            continue;
         }
 
         messages.push((true, message.clone()));
